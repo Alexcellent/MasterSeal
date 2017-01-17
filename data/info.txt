@@ -1,0 +1,14 @@
+Egr_Epithelial_proliferation_rate [0.0085, 0.034]
+ACT_BMP4_auto-activation [0.55, 2.2]
+Pbi_Posterior_bias [9, 36]
+
+Output file: Encode the values of the above three values in some way. E.G. E_0d8_A0d55_P9.off
+
+TODO:
+
+- Function to iterate over all of the above ranges (triple-nested for-loop)
+    - read in original sealmaster.txt file, store values for duration of program
+    - modify params as needed, and for each set write a new file (new name so as to maintain orig sealmaster.txt)
+    - execute program with newly generated sealmaster.txt for specific number of iterations
+    - store the output name and the value of the 3 params in list
+    - when all iterations complete, output the name-value info as .csv

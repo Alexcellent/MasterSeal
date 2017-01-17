@@ -1,0 +1,27 @@
+0.01700     Egr_Epithelial_proliferation_rate
+200.000     Mgr_Mesenchymal_proliferation_rate
+1.00000     Rep_Repulsion
+0.00000     Nothing
+0.00100     ADH_Traction_between_neighbors
+1.10000     ACT_BMP4_auto-activation
+26.0000     INH_Inhibtion_of_SHH_over_BMP4
+0.00000     Nothing
+0.03000     Sec_FGF4_secretion_rate
+0.00000     Nothing
+0.20000     Da_BMP4_diffusion_rate
+0.20000     Di_SHH_diffusion_rate
+0.20000     Ds_FGF4_diffusion_rate
+0.00000     Nothing
+0.19000     Int_Initial(SHH)_threshold
+0.95000     Set_secondary(FGF4)_threshold
+0.10000     Boy_Boyancy_Mesenchyme_mechanic_resistance
+0.00020     Dff_Differentiation_rate
+1.00000     Bgr_Border_growth_Amount_of_Mesenchyme_in_AP
+15.0000     Abi_Anterior_bias
+18.0000     Pbi_Posterior_bias
+1.00000     Bbi_Buccal_bias_(invariable in seals)
+1.00000     Lbi_Lingual_bias_(invariable in seals)
+2.00000     Rad_Radius_of_initial_conditions(2 for having 7 cells)_(invariable in seals)
+0.10000     Deg_Protein_degradation_rate
+10000.0     Dgr_Downward_vector_of_growth
+0.00001     Ntr_Nuclear_atraction_Mechanical_traction_from_the_borders_to_the_nucleus
