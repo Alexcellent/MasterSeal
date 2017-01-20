@@ -1,9 +1,9 @@
-0.0335		Egr_Epithelial_proliferation_rate
+0.034		Egr_Epithelial_proliferation_rate
 200.000		Mgr_Mesenchymal_proliferation_rate
 1.00000		Rep_Repulsion
 0.00000		Nothing
 0.00100		ADH_Traction_between_neighbors
-2.15		ACT_BMP4_auto-activation
+2.2		ACT_BMP4_auto-activation
 26.0000		INH_Inhibtion_of_SHH_over_BMP4
 0.00000		Nothing
 0.03000		Sec_FGF4_secretion_rate

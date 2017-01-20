@@ -1,6 +1,5 @@
 from __future__ import print_function
 from subprocess import PIPE, Popen
-import sys
 
 # constants
 COMMAND = './programlinux.e'            # command to run
@@ -14,7 +13,7 @@ e = 'Egr_Epithelial_proliferation_rate'
 a = 'ACT_BMP4_auto-activation'
 p = 'Pbi_Posterior_bias'
 
-ranges = {e: (0.0085, 0.0340, 0.001), a: (0.55, 2.2, 0.1), p: (9.0, 36.0, 3.0)}  # defines ranges & step per parameters
+ranges = {e: (0.0085, 0.0340, 5.0), a: (0.55, 2.2, 5.0), p: (9.0, 36.0, 5.0)}  # defines ranges & step per parameters
 
 
 # reads the parameters from the specified file as key-value pairs
@@ -63,15 +62,15 @@ if __name__ == '__main__':
     input_params = read_param_file(ORIG_PARAM_FILE)
 
     # alter parameters and run program for every combination in specified ranges
-    total_executions = int((ranges[e][1] - ranges[e][0]) / ranges[e][2])
-    total_executions *= int((ranges[a][1] - ranges[a][0]) / ranges[a][2])
-    total_executions *= int((ranges[p][1] - ranges[p][0]) / ranges[p][2])
-
     file_map = [('Filename', 'e', 'a', 'p')]
     counter = 1
-    for i in frange_incl(ranges[e][0], ranges[e][1], ranges[e][2]):
-        for j in frange_incl(ranges[a][0], ranges[a][1], ranges[a][2]):
-            for k in frange_incl(ranges[p][0], ranges[p][1], ranges[p][2]):
+
+    e_step = (ranges[e][1] - ranges[e][0]) / ranges[e][2]
+    a_step = (ranges[a][1] - ranges[a][0]) / ranges[a][2]
+    p_step = (ranges[p][1] - ranges[p][0]) / ranges[p][2]
+    for i in frange_incl(ranges[e][0], ranges[e][1], e_step):
+        for j in frange_incl(ranges[a][0], ranges[a][1], a_step):
+            for k in frange_incl(ranges[p][0], ranges[p][1], p_step):
                 alt_params = {e: i, a: j, p: k}
                 alter_params(input_params, alt_params)
                 output_altered_param_file(input_params)
